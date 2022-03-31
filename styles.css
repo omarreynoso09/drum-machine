@@ -1,72 +1,90 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: none;
-    flex-direction: column;
-    background-color: #81b29a;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: none;
+  flex-direction: column;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(121, 121, 237, 1) 0%,
+    rgba(5, 219, 107, 1) 100%
+  );
 }
 
 .tip {
-    font-style: italic;
-    font-weight: bold;
-    margin: 24px;
-    font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  font-weight: bold;
+  margin: 24px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .metronome {
-    display: flex;
-    width: 350px;
-    height: 400px;
-    position: relative;
+  display: flex;
+  width: 350px;
+  height: 400px;
+  position: relative;
 }
 
 .background-left {
-    border-bottom: 400px solid #e07a5f;
-    border-left: 100px solid transparent;
+  border-bottom: 400px solid #12e9f4;
+  border-left: 100px solid transparent;
 }
 
 .background-center {
-    flex: 1;
-    background-color: #f2cc8f;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex: 1;
+  background-color: #60c9ec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .background-right {
-    border-bottom: 400px solid #e07a5f;
-    border-right: 100px solid transparent;
+  border-bottom: 400px solid #12e9f4;
+  border-right: 100px solid transparent;
 }
 
 .core {
-    flex: 1;
-    width: 30%;
-    background-color: #f4f1de;
-    margin: 24px 0;
-    border: 6px dashed #e07a5f;
+  flex: 1;
+  width: 30%;
+  background-color: #f4f1de;
+  margin: 24px 0;
+  border: 6px dashed #000000;
 }
 
 @keyframes tick {
-    0%   { transform: rotate(-30deg); }
-    50%  { transform: rotate(30deg);  }
-    100% { transform: rotate(-30deg); }
+  0% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
 }
 
 .arm {
-    height: 300px;
-    width: 20px;
-    background-color: #3d405b;
-    position: absolute;
-    bottom: 5px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    left: 165px;
-    transform-origin: bottom center;
-    animation: tick 1200ms ease-in-out infinite;
+  height: 300px;
+  width: 20px;
+  background-color: #3d405b;
+  position: absolute;
+  bottom: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  left: 165px;
+  transform-origin: bottom center;
+  animation: tick 1200ms ease-in-out infinite;
+}
+
+.box {
+  margin-top: 10px;
+  outline: 7px groove #2697e0;
+  outline-offset: 5px;
 }

@@ -1,26 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metronome</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="tip">
-        (Click anywhere to hear sound...)
-    </div>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="tip">(Click anywhere to start jamming...)</div>
 
     <div class="metronome">
-        <div class="background-left"></div>
-        <div class="background-center">
-            <div class="core"></div>
-        </div>
-        <div class="background-right"></div>
-        <div class="arm"></div>
+      <div class="background-left"></div>
+      <div class="background-center">
+        <div class="core"></div>
+      </div>
+      <div class="background-right"></div>
+      <div class="arm"></div>
     </div>
-
+ 
+      <div id="counter-area"></div>
+         <div class="box">
+      <div id="metronome">
+        <label for="metronome">
+          Metronome
+          <input
+            type="checkbox"
+            id="metronome-checkbox"
+            name="playSound"
+            value="metronome"
+            checked
+          />
+        </label>
+      </div>
+      <div id="snaredrum">
+        <label for="snaredrum"
+          >Snare
+          <input
+            type="checkbox"
+            id="snaredrum-checkbox"
+            name="playSound"
+            value="snaredrum"
+          />
+        </label>
+        <label for="snare-counter"
+          >Count
+          <input
+            type="number"
+            min="1"
+            max="4"
+            id="snare-count"
+            name="snare-counter"
+            value="1"
+          />
+        </label>
+      </div>
+      <div id="hihat">
+        <label for="hihat"
+          >Hi-Hat
+          <input
+            type="checkbox"
+            id="hihat-checkbox"
+            name="playSound"
+            value="hihat"
+          />
+        </label>
+        <label for="hihat-counter"
+          >Count
+          <input
+            type="number"
+            min="1"
+            max="4"
+            id="hihat-count"
+            name="hihat-counter"
+            value="1"
+          />
+        </label>
+      </div>
+      <div id="kick">
+        <label for="kick"
+          >Drum
+          <input
+            type="checkbox"
+            id="kickdrum-checkbox"
+            name="playSound"
+            value="kick"
+          />
+        </label>
+        <label for="kick-counter"
+          >Count
+          <input
+            type="number"
+            min="1"
+            max="4"
+            id="kick-count"
+            name="kick-counter"
+            value="1"
+          />
+        </label>
+      </div>
+    
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
